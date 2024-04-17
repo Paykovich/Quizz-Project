@@ -1,0 +1,45 @@
+Tento kód je zodpovědný za funkci JavaScriptového kvízu. Kód obsahuje následující prvky:
+
+Získání odkazů na prvky HTML pomocí metody document.querySelector a jejich uložení do proměnných: 
+    info_box, exit_btn, continue_btn, quiz_box, 
+    result_box, option_list, time_line, timeText, 
+    timeCount, restart_quiz, quit_quiz, next_btn, 
+    bottom_ques_counter.
+Přiřazení obsluhy událostí tlačítkům continue_btn, restart_quiz, quit_quiz a next_btn.
+
+Definice proměnných: timeValue, que_count, que_numb, userScore, counter, counterLine, widthValue.
+
+Funkce showQuestions(index), která na stránce zobrazuje otázky a možnosti odpovědí v závislosti na předaném parametru indexu.
+
+Funkce optionSelected(answer), která se stará o volbu odpovědi uživatele na otázku.
+
+Funkce showResult(), která zobrazuje výsledky kvízu na základě počtu správných odpovědí uživatelů.
+
+Funkce queCounter(n) a startTimer(čas) a startTimerLine(šířka) pro zobrazení čítačů a časovače na stránce.
+
+Obsluha události pro continue_btn skryje info_box, zobrazí quiz_box, zavolá funkci showQuestions(0), 
+
+funkci queCounter(1), funkci startTimer(15) a funkci startTimerLine(0).
+
+Obslužná rutina události pro restart_quiz resetuje všechny hodnoty proměnných na jejich počáteční hodnoty 
+a volá funkce showQuestions(que_count), queCounter(que_numb), startTimer(timeValue) a startTimerLine(widthValue).
+
+Obsluha události pro quit_quiz znovu načte stránku.
+
+Obslužná rutina události pro next_btn volá funkce showQuestions(que_count), 
+queCounter(que_numb), startTimer(timeValue) a startTimerLine(widthValue), 
+pokud počet otázek nepřekročí maximální hodnotu. Pokud byly zodpovězeny všechny otázky, 
+zavolá se funkce showResult().
+
+Funkce optionSelected(answer) zastaví časovač, zpracuje uživatelem vybranou odpověď 
+a v závislosti na správnosti odpovědi zvýší počítadlo správných odpovědí userScore a přidá na stránku ikonu zaškrtnutí nebo křížku.
+
+Funkce showResult() skryje info_box a quiz_box, zobrazí result_box a v závislosti na počtu správných uživatelských odpovědí zobrazí zprávu o výsledcích.
+
+Funkce showResult() zobrazí výsledek uživateli, který byl přijat během testu. 
+Pokud uživatel získal více než tři body, zobrazí se zpráva s gratulací, pokud mezi dvěma až třemi body, 
+zobrazí se zpráva s poděkováním, v opačném případě se zobrazí zpráva, že výsledky testu jsou neuspokojivé.
+
+Kód také obsahuje několik funkcí, které jsou zodpovědné za zobrazení času a správu časovače, 
+stejně jako funkce pro zobrazení otázek a zpracování uživatelských odpovědí. 
+Obecně je kód napsán v JavaScriptu a k zobrazení ikon používá knihovnu Font Awesome.

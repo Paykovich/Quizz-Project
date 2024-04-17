@@ -1,0 +1,21 @@
+Tento kód je malý projekt „Quizz“ (kvíz), který zobrazuje text na stránce znak po znaku a zobrazuje tlačítko „Start“ pro pokračování v kvízu.
+
+Kód se skládá z několika částí:
+
+Vytváření proměnných:
+pole textových řetězců "text" obsahující uvítací zprávu a pokyny pro spuštění kvízu;
+proměnná "animationDelay", která generuje náhodné zpoždění pro animaci výstupu textu;
+proměnná "line", která ukládá aktuální index řádku do pole "text";
+proměnná "count", která ukládá aktuální index znaků v řetězci;
+proměnná "výsledek", která obsahuje mezivýsledek textového výstupu.
+Funkce "typeLine()", která zobrazuje text na stránce znak po znaku. Tato funkce používá setTimeout() ke generování zpoždění mezi znaky.
+Po vytištění každého znaku funkce aktualizuje proměnnou "výsledek" a nastaví novou hodnotu pro prvek h1 na stránce. 
+Pokud byl vypsán celý řádek, funkce skočí na další řádek,
+a pokud byly vykresleny všechny řádky, zavolá funkci "showButton()", která zobrazí tlačítko na stránce.
+
+Funkce "getRandomInt()", která generuje náhodné číslo v daném rozsahu.
+
+Funkce "showButton()", která zobrazí tlačítko "Start" na stránce úpravou stylů prvků.
+
+Spusťte funkci "typeLine()" pro zobrazení textu na stránce.
+
